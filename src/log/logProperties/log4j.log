@@ -1,15 +1,1 @@
-
-18Äê01ÔÂ10ÈÕ 15:51:40:636 INFO  [org.brush.thread.WaxTest] 开始 
-18Äê01ÔÂ10ÈÕ 15:51:45:646 INFO  [org.brush.thread.WaxTest] StopTest 
-18Äê01ÔÂ11ÈÕ 09:20:40:952 INFO  [SB桌奶] 开始 
-18Äê01ÔÂ11ÈÕ 09:20:45:966 INFO  [SB桌奶] StopTest 
-18Äê01ÔÂ11ÈÕ 09:29:26:296 INFO  [] 开始 
-18Äê01ÔÂ11ÈÕ 09:29:31:308 INFO  [] StopTest 
-2018-01-11 09:33:42 [INFO] 开始
-2018-01-11 09:33:47 [INFO] StopTest
-2018-01-11 09:45:58 [INFO]-[testWax(org.brush.thread.WaxTest:21)] 开始
-2018-01-11 09:46:03 [INFO]-[testWax(org.brush.thread.WaxTest:32)] StopTest
-2018-01-11 09:47:05 [INFO]-[testWax(org.brush.thread.WaxTest:21)] 开始
-2018-01-11 09:47:11 [INFO]-[testWax(org.brush.thread.WaxTest:32)] StopTest
-2018-01-11 09:50:29 [INFO]-[testWax(org.brush.thread.WaxTest:21)] 开始
-2018-01-11 09:50:34 [INFO]-[testWax(org.brush.thread.WaxTest:32)] StopTest
+18-01-12 15:58:48:547 main  INFO  [Test] Start Test 

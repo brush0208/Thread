@@ -1,7 +1,5 @@
 package org.brush.thread.philosopherQuestion;
 
-import jdk.nashorn.internal.ir.CatchNode;
-
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -21,7 +19,7 @@ public class Philosopher  implements Runnable{
 
     private void pause() throws InterruptedException
     {
-        if(ponderFactor==0)return;;
+        if(ponderFactor==0)return;
         TimeUnit.MILLISECONDS.sleep(rand.nextInt(ponderFactor*250));
     }
 
@@ -33,7 +31,7 @@ public class Philosopher  implements Runnable{
                 pause();
                 System.out.println(this+" "+"grabbing right");
                 right.take();
-                System.out.println(this+" "+"grapping left" );
+                System.out.println(this+" "+"grabbing left" );
                 left.take();
                 System.out.println(this+" "+"Eating");
                 pause();
