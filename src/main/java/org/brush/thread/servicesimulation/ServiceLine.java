@@ -16,7 +16,7 @@ public class ServiceLine extends ArrayBlockingQueue<Service> {
     @Override
     public String toString() {
         if(this.size()==0)
-            return "[Empity]";
+            return "[Empty]";
         StringBuffer line=new StringBuffer();
         for(Service service:this)
         {

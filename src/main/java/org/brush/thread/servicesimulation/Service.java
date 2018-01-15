@@ -3,6 +3,7 @@ package org.brush.thread.servicesimulation;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class Service implements Runnable,Comparable<Service> {
@@ -29,9 +30,11 @@ public class Service implements Runnable,Comparable<Service> {
             while (!Thread.interrupted())
             {
                 Client client = clients.take();
+                logger.info(this+"-service for"+client+"Waited Time:"+(new Date().getTime()-client.getStartTime()));
+                //logger.info(this+"-service for"+client);
                 TimeUnit.MILLISECONDS.sleep(client.getConnertTime());
                 endWork();
-                services.put(this);
+
                 synchronized (this)
                 {
                     while (!serviceIng)
@@ -50,9 +53,13 @@ public class Service implements Runnable,Comparable<Service> {
         this.serviceIng=true;
         this.notifyAll();
     }
-    public synchronized void endWork()
-    {
+    public synchronized void endWork() throws InterruptedException {
         this.serviceIng=false;
+        services.put(this);
     }
 
+    @Override
+    public String toString() {
+        return "[id:"+id+"]";
+    }
 }

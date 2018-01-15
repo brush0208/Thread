@@ -20,8 +20,9 @@ public class ClientGenerator implements Runnable {
             while (!Thread.interrupted())
             {
                 logger.info("create one new Client");
-                clients.put(new Client(rand.nextInt(1000)));
-                TimeUnit.MILLISECONDS.sleep(rand.nextInt(300));
+                TimeUnit.MILLISECONDS.sleep(rand.nextInt(30));
+                clients.put(new Client(rand.nextInt(300)));
+               // System.out.println(clients);
             }
 
         } catch (InterruptedException e) {
